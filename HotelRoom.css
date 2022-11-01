@@ -1,0 +1,152 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: bottom;
+}
+
+.container {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    height: 450px;
+    width: 70%;
+    border: 1px solid black;
+    background-color: white;
+    margin: 33px auto;
+    margin-top: 100px;
+}
+ .roomtype{
+    margin-bottom:2px ;
+     margin-left:15%; 
+     cursor: pointer;
+     color: black;
+ }
+ .roomtype:hover{
+    color: rgb(80, 142, 196);
+ }
+
+.item {
+    height: 400px;
+    margin: 1px 3px;
+    padding: 1px 3px;
+}
+
+#rightside {
+float: right;
+width: 30%;
+text-align: right;
+display: flex;
+flex-direction: column;
+}
+
+#leftside {
+    float: right; 
+width: 30%;
+clear: left;
+text-align: left;
+border-right: 1px solid black;
+padding: 5px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding-right: 100px;
+}
+
+#photo {
+    clear: left;
+    width: 40%;
+    margin-left: 20px;
+    padding: 5px;
+}
+
+#terms {
+    text-align: right;
+}
+
+h1 {
+    margin: 23px auto;
+    width: 455px;
+}
+
+#outline {
+    border: 2px solid black;
+}
+
+.rightul {
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 10px;
+    margin-bottom: 56px;
+    margin-left: 80px;
+    margin-top: 25px;
+}
+
+.liitems {
+    list-style: square;
+    color: black;
+    margin: 2px;
+    font-size: large;
+    text-align: justify;
+}
+
+.imgw {
+    width: 250px;
+    height: 300px;
+}
+
+.facilities {
+    display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.button1 {
+    color: white;
+    border-radius: 3px;
+    background-color: rgb(103, 103, 237);
+    border: none;
+    padding: 9px 12px;
+    text-align: center;
+    margin: 4px 0px;
+    cursor: pointer;
+}
+
+.button1:hover {
+    background-color: rgb(0, 0, 233);
+}
+
+.button1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.button1 a:hover {
+    color: white;
+}
+
+.book-button {
+    margin-right: 50px;
+}
+
+.facilities {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.insidefacilities {
+    text-align: justify;
+    margin: 20px;
+}
+
+.price {
+    display: flex;
+    float: left;
+    margin-top: 10px;
+    margin-left: 70px;
+    color: rgb(84, 84, 170);
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Bookkaro.com</title>
+
+    <link rel="stylesheet" href="/HomePage.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="navbar">
+            <ul>
+                <span><b> <a href="/HomePage.html">Bookkaro.com</a></b></span>
+
+                <li class="nav-item"  style="margin-right: 20px;"><a href="/login.html">Login</a></li>
+                <li class="nav-item"><a href="/signup.html">Create Account</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="box-form">
+        <div class="left">
+            <div class="overlay">
+
+                <span>
+                    <div class="greeting">
+                        <p>Welcome To</p>
+                    </div>
+                    <!-- <p>Welcome To</p> -->
+                    <div class="Book">
+                        <p>Bookkaro Family</p>
+                    </div>
+
+                    <div class="nothing">
+                        <p>Your wish is Our First Priority</p>
+                    </div>
+                </span>
+            </div>
+        </div>
+
+        <div class="right">
+            <h3 >Information</h3>
+            <form class="inputs" onsubmit="return validateForm()" name="myForm" id="submitform">
+            <div >
+                <input type="text" placeholder="Where do you wany to go?">
+                <br>
+
+                <div class="date1">
+                    <p> Check in Date</p>
+                    <input type="date" required  id="check-in" >
+                </div>
+                <div class="date2">
+                    <p> Check out Date</p>
+                    <input type="date" required  id="check-out">
+                </div>
+                <br>
+                <div class="personInfo">
+                    <p> Person</p>
+
+                    <input class="boxP" type="number" min="1" max="10" placeholder="adult" type="number" placeholder="Child" required>
+                    <input class="boxP" type="number" placeholder="Child" min="1" max="10" required>
+                </div>
+            </div>
+            <br>
+           <a href="Hotel.html"> <button type="submit" class="signup-btn">Submit</button></a>
+            <br>
+        </form>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <div class="main">
+        <div class="place2">
+            <div class="visit1">
+                <h4 class="pname1">SURAT</h4>
+                <p><a href=""> <img src="./surat.jpeg" alt=""></a></p>
+            </div>
+        </div>
+
+</body>
+<script>
+  function  validateForm(){
+       let checkin = document.getElementById("check-in");
+       let checkout = document.getElementById("check-out");
+
+       let a = checkinValidation(checkin);
+       let b = checkoutValidation(checkin,checkout);
+       if(a&&b){
+        // window.location.href = "./Hotel.html";
+        alert("your Information saced successfully");
+        return true;
+       }
+       else{
+        return false;
+       }
+
+  }
+  function checkinValidation(checkin){
+    let check1 = checkin.value;
+    let date = new Date();
+    let age1 = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    let age2 = new Date(check1.getFullYear(), check1.getMonth(), check1.getDate());
+    if (age1>age2) {
+       return false;
+    }
+   return true;
+  }
+  function checkoutValidation(checkin,checkout){
+    let check1 = checkin.value;
+    let check2 = checkout.value;
+    let age1 = new Date(check1.getFullYear(), check1.getMonth(), check1.getDate());
+    let age2 = new Date(check2.getFullYear(), check2.getMonth(), check3.getDate());
+    if (age1>age2 && (age2-age1)>30) {
+       return false;
+    }
+   return true;
+  }
+</script>
+</html>
